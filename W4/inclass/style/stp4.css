@@ -1,0 +1,10 @@
+.grandchild {padding: 4px;
+    background-color: pink;}
+
+.child {padding: 8px;
+background-color: beige;}
+
+.parent {padding: 16px;
+background-color: azure;
+margin: 16px auto;
+max-width: 960px;}
