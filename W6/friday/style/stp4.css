@@ -55,6 +55,6 @@
 .button--type-text {
     background-color: unset;
     color: slateblue;
-    padding-inline: 0;
+    padding-inline: unset;
 }
 

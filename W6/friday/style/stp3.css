@@ -4,15 +4,15 @@
     box-sizing: border-box;
 
 }
-
+/* 
 body{
-    /* color: white; */
+    color: white;
 }
 
 
 .section{
-    /* background-color: red; */
-}
+    background-color: red;
+} */
 
 .container{
     /* background-color: green; */
@@ -45,14 +45,14 @@ body{
     color: white;
     font-weight: 700;
 }
-
+/* 
 .nav__menu, .nav__logo {
-    /* color: white; */
+    color: white;
 }
 
 .nav .container {
-    /* background-color: gray; */
-}
+    background-color: gray;
+} */
 
 .button {
     background-color: slateblue;
