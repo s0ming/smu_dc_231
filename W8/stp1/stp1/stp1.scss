@@ -22,6 +22,12 @@ body{
   padding-inline: var(--variableName);
 }
 
+.content1 { 
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .wrapper {
   /* background-color: blue; */
   padding-block: 64px;
@@ -76,6 +82,10 @@ body{
   }
 }
 
+.imgs {
+  display: inline-block;
+}
+
 /* 
 .nav__menu, .nav__logo {
     color: white;
@@ -87,6 +97,13 @@ body{
 
 #hero1 {
   text-align: center;
+}
+
+#hero2 {
+  .main
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+}
 }
 
 .main {
