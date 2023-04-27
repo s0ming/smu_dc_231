@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.section {
-  /* background-color: red; */
-}
-
 .container {
   /* background-color: green; */
   max-width: 1328px;
