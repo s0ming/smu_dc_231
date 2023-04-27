@@ -30,7 +30,7 @@ body{
 .button {
   background-color: #974ef8;
   color: #fff;
-  padding: 4px 24px;
+  padding: 8px 24px;
   font-weight: 350;
   border-radius: 24px;
   text-align: center;
@@ -40,8 +40,10 @@ body{
   background-color: white;
   color: black;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "NEXON Lv2 Gothic Bold";
+  container-type: inline-size;
+  container-name: nav;
 
   .wrapper {
     display: flex;
@@ -55,13 +57,22 @@ body{
     align-items: baseline;
   }
 
-  &__logo {
-    max-width: 150px;
-    padding-right: 24px;
+  .lt920px {
+    display: unset;
   }
 
-  &__logo2 {
-    padding-top: 70px;
+  @container nav (width < 66.25rem) {
+    &__menuWrapper {
+      display: none;
+    }
+    .lt920px {
+      display: unset;
+    }
+  }
+
+  &__logo {
+    max-width: 180px;
+    padding-right: 24px;
   }
 }
 
@@ -101,4 +112,52 @@ body{
 p {
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.logo2 {
+  padding-top: 80px;
+}
+
+.logo3 {
+  max-width: 150px;
+}
+
+.info {
+  padding-top: 10px;
+  padding-bottom: 14px;
+}
+
+.end {
+  padding-top: 16px;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  color: #444444;
+  container-type: inline-size;
+  container-name: footer;
+
+  a {
+    text-decoration: none;
+    color: #444444;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .wrapper {
+    // display: flex;
+    // justify-content: space-between;
+    // gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 25px;
+  }
+  h2 {
+  margin-bottom: 16px;}
+
+  @container footer (width < 40.625rem) {
+    .wrapper(grid-template-columns: 1fr)
+  }
 }
