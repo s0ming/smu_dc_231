@@ -4,20 +4,67 @@
   box-sizing: border-box;
 }
 
-/* 
-body{
-    color: white;
-}
-
-
-.section{
-    background-color: red;
-} */
 .container {
   --variableName: 24px;
   max-width: calc(1200px + 2 * var(--variableName));
   margin-inline: auto;
   padding-inline: var(--variableName);
+}
+
+img {
+  width: 380px;
+}
+
+.sub__text {
+  font-size: 70px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.sub__menu1 {
+  padding-top: 90px;
+  text-align: left;
+}
+.sub__menu3 {
+  text-align: right;
+}
+
+.imgs {
+  width: 100%;
+  display: inline-block;
+}
+
+.slogun {
+  padding-top: 30px;
+  font-size: 36px;
+  color: #444444;
+  font-family: "Montserrat", sans-serif;
+}
+
+.letter {
+  font-size: 20px;
+  padding-top: 20px;
+  max-width: 500px;
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "NEXON Lv2 Gothic";
+}
+
+span {
+  color: #974ef8;
+}
+
+.global {
+  font-size: 24px;
+  font-family: "NEXON Lv2 Gothic";
+  font-weight: 700;
+}
+
+.artist {
+  padding-top: 24px;
+  font-family: "NEXON Lv2 Gothic";
+  padding-bottom: 70px;
+  max-width: 320px;
 }
 
 .wrapper {
@@ -28,7 +75,7 @@ body{
 .button {
   background-color: #974ef8;
   color: #fff;
-  padding: 8px 24px;
+  padding: 4px 24px;
   font-weight: 350;
   border-radius: 24px;
   text-align: center;
@@ -70,6 +117,10 @@ body{
   padding-right: 24px;
 }
 
+.imgs {
+  display: inline-block;
+}
+
 /* 
 .nav__menu, .nav__logo {
     color: white;
@@ -80,6 +131,10 @@ body{
 } */
 #hero1 {
   text-align: center;
+}
+
+.main #hero2__text {
+  font-family: "Montserrat", sans-serif;
 }
 
 .main__text {
@@ -120,12 +175,14 @@ p {
 }
 
 .end {
-  padding-block: 16px;
+  padding-top: 16px;
 }
 
 .footer {
   background-color: #f0f0f0;
   color: #444444;
+  container-type: inline-size;
+  container-name: footer;
 }
 .footer a {
   text-decoration: none;
@@ -138,7 +195,7 @@ p {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  line-height: 25px;
-  container-type: inline-size;
-  container-name: footer__wrapper;
+}
+.footer h2 {
+  margin-bottom: 16px;
 }

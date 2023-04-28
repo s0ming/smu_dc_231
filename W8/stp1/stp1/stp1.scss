@@ -3,15 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* 
-body{
-    color: white;
-}
 
+// body {
 
-.section{
-    background-color: red;
-} */
+// }
+
+// .section{
+//     background-color: red;
+// } */
 
 .container {
   --variableName: 24px;
@@ -22,11 +21,63 @@ body{
   padding-inline: var(--variableName);
 }
 
-.content1 { 
-  font-size: 50px;
-  font-family: 'Montserrat', sans-serif;
+img {
+  width: 380px;
 }
 
+.sub {
+  &__text {
+    font-size: 70px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  &__menu1 {
+    padding-top: 90px;
+    text-align: left;
+  }
+  &__menu3 {
+    text-align: right;
+  }
+}
+
+.imgs {
+  width: 100%;
+  display: inline-block;
+}
+
+.slogun {
+  padding-top: 30px;
+  font-size: 36px;
+  color: #444444;
+  font-family: "Montserrat", sans-serif;
+}
+
+.letter {
+  font-size: 20px;
+  padding-top: 20px;
+  max-width: 500px;
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "NEXON Lv2 Gothic";
+}
+
+span {
+  color: #974ef8;
+}
+
+.global {
+  font-size: 24px;
+  font-family: "NEXON Lv2 Gothic";
+  font-weight: 700;
+}
+
+.artist {
+  padding-top: 24px;
+  font-family: "NEXON Lv2 Gothic";
+  padding-bottom: 70px;
+  max-width: 320px;
+}
 
 .wrapper {
   /* background-color: blue; */
@@ -36,7 +87,7 @@ body{
 .button {
   background-color: #974ef8;
   color: #fff;
-  padding: 8px 24px;
+  padding: 4px 24px;
   font-weight: 350;
   border-radius: 24px;
   text-align: center;
@@ -100,10 +151,9 @@ body{
 }
 
 #hero2 {
-  .main
-  &__text {
-    font-family: 'Montserrat', sans-serif;
-}
+  .main &__text {
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
 .main {
@@ -164,17 +214,18 @@ p {
   }
 
   .wrapper {
-    // display: flex;
-    // justify-content: space-between;
-    // gap: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // line-height: 25px;
   }
   h2 {
-  margin-bottom: 16px;}
-
-  @container footer (width < 40.625rem) {
-    .wrapper(grid-template-columns: 1fr)
+    margin-bottom: 16px;
   }
+
+  // @container footer (width < 40.625rem) {
+  //   .wrapper(grid-template-columns: 1fr)
+  // }
 }
