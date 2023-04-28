@@ -45,7 +45,7 @@ img {
   padding-top: 20px;
   max-width: 500px;
   line-height: 30px;
-  align-items: center;
+  margin-inline: auto;
   padding-bottom: 20px;
   font-family: "NEXON Lv2 Gothic";
 }
@@ -65,6 +65,8 @@ span {
   font-family: "NEXON Lv2 Gothic";
   padding-bottom: 70px;
   max-width: 320px;
+  margin-inline: auto;
+  line-height: 25px;
 }
 
 .wrapper {
@@ -82,7 +84,7 @@ span {
 }
 
 .nav {
-  background-color: rgb(247, 239, 254);
+  background-color: rgb(251, 247, 255);
   color: black;
   font-weight: 800;
   font-size: 24px;
@@ -163,6 +165,7 @@ p {
 
 .logo2 {
   padding-top: 80px;
+  padding-inline: 40px;
 }
 
 .logo3 {
