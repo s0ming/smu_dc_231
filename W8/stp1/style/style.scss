@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  font-family: "Roboto", sans-serif;
+  width: fit-content;
+  color: #49454f;
+  border: 1px solid #797472;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: bachkground-color 2000ms;
+}
+
+.badge {
+  font-size: 11px;
+  line-height: 16px;
+  background-color: red;
+  aspect-ratio: 1 / 1;
+  width: 16px;
+}
