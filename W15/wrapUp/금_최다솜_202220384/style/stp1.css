@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   max-width: calc(80ch + 4rem);
-  min-height: max(50dvh, 2rem);
+  min-height: max(600px, 100dvh);
   margin-inline: auto;
   padding-inline: 2rem;
 }
@@ -57,15 +57,18 @@ main {
   grid-row: 1;
 }
 
+.content {
+  margin-inline: auto;
+}
+
 aside {
   position: sticky;
   z-index: 3;
   top: 0;
   grid-column: 1;
   grid-row: 1;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: max(100dvh, 2rem);
+  width: 100%;
+  height: max(600px, 100dvh);
   padding-inline: 1rem 1.5rem;
   border-radius: 0 1rem 1rem 0;
   background-color: var(--surface-transparent);
@@ -97,7 +100,7 @@ aside ol li::before {
   width: 1rem;
   height: 1rem;
   margin-top: 0.125rem;
-  transition: border-color 150ms ease-out;
+  transition: border-color 150ms ease-out, background-color 150ms ease-out;
   border: 0.125rem solid var(--onSurface);
   border-radius: 999999999px;
 }
@@ -107,8 +110,16 @@ aside ol li:hover {
 aside ol li:hover::before {
   border-color: var(--accent);
 }
+aside ol li.pressed {
+  color: var(--accent);
+}
+aside ol li.pressed::before {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
 aside a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .progressBar {
@@ -123,6 +134,7 @@ aside a {
 }
 .progressBar .indicator {
   position: absolute;
+  transform: scaleX(0);
   transform-origin: left;
   background-color: var(--accent);
   inset: 0;
@@ -179,4 +191,53 @@ footer .wrapper {
   aside ol {
     justify-content: flex-start;
   }
+}
+#section1 h3.animTarget {
+  transform: scale(0);
+  transition: transform 500ms ease-out;
+}
+#section1.triggered h3.animTarget {
+  transform: scale(1);
+}
+
+#section2 .content.animTarget {
+  transition: background-color 500ms ease-out, border 500ms ease-out;
+}
+#section2 h3.animTarget {
+  transform: translateX(-100vw);
+  transition: transform 500ms ease-out;
+}
+#section2 p.animTarget {
+  transform: translateX(100vw);
+  transition: transform 500ms ease-out;
+}
+#section2.triggered h3.animTarget {
+  transform: translateX(0);
+}
+#section2.triggered p.animTarget {
+  transform: translateX(0);
+}
+
+#section3 .content .animTarget {
+  transform: translateX(100vw);
+  transition: transform 500ms ease-out;
+}
+#section3 .content.triggered .animTarget {
+  transform: translateX(0);
+}
+
+#section4 h3.animTarget {
+  transform: scale(0);
+  transition: transform 500ms ease-out;
+}
+#section4.triggered h3.animTarget {
+  transform: scale(1);
+}
+
+#section5 .content h3.animTarget {
+  transform: translateX(100vw);
+  transition: transform 500ms ease-out;
+}
+#section5 .content.triggered h3.animTarget {
+  transform: translateX(0);
 }
