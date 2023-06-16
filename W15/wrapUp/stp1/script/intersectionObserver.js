@@ -1,7 +1,7 @@
 let observerOption = {
   root: null,
-  rootMargin: "0px",
-  threshold: 0.5,
+  rootMargin: "0px 0px -200px 0px",
+  threshold: 0.75,
 };
 
 // function observerCallback() {}
