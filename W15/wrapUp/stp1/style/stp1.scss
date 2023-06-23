@@ -29,13 +29,28 @@ html {
   scroll-behavior: smooth;
 }
 
+#title {
+  font-size: 60px;
+  filter: blur(0.125rem);
+  transition: all 500ms ease-in-out;
+}
+
+#title:hover {
+  filter: blur(0);
+  transition: all 500ms ease-in-out;
+}
+
 body {
   margin: 0;
   background-color: $bg;
   color: $txt;
-  font-family: system-ui;
+  font-family: "Hahmlet", serif;
   font-size: 1.125rem;
   line-height: 1.5;
+}
+
+p {
+  margin-top: 5rem;
 }
 
 .wrapper {
@@ -46,14 +61,17 @@ body {
     80ch + 2 * $wrapper-padding-inline
   );
   min-height: max(600px, 100dvh);
-  margin-inline: auto;
   padding-inline: $wrapper-padding-inline;
+  line-height: 1.5;
+  margin-inline: auto;
 }
 
 header {
   text-align: center;
   text-wrap: balance;
   word-break: keep-all;
+  color: white;
+  font-size: 30px;
 }
 
 section:nth-of-type(odd) {
@@ -90,6 +108,9 @@ aside {
   background-color: $surface-transparent;
   font-size: 0.875rem;
   backdrop-filter: blur(0.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ol {
     display: flex;
@@ -243,42 +264,42 @@ footer {
 }
 
 #section2 {
-  .content.animTarget {
-    transition: background-color 500ms ease-out,
-      border 500ms ease-out;
+  .content {
+    .animTarget {
+      transition: background-color 500ms ease-out,
+        border 500ms ease-out;
+    }
   }
   h3.animTarget {
     transform: translateX(-100vw);
     transition: transform 500ms ease-out;
   }
   p.animTarget {
-    transform: translateX(100vw);
-    transition: transform 500ms ease-out;
+    animation: slideIn_down 1s ease-out forwards,
+      fadeIn 1s ease-in forwards;
   }
   &.triggered {
-    .content.animTarget {
-    }
-    h3.animTarget {
-      transform: translateX(0);
-    }
-    p.animTarget {
-      transform: translateX(0);
-    }
-  }
-}
-
-#section3 {
-  .content {
-    .animTarget {
-      transform: translateX(100vw);
-      transition: transform 500ms ease-out;
-    }
-    &.triggered {
+    .content {
       .animTarget {
+      }
+      h3.animTarget {
+        transform: translateX(0);
+      }
+      p.animTarget {
         transform: translateX(0);
       }
     }
   }
+}
+
+#section3 p.animTarget {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+#section3 .triggered p.animTarget {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 1s, transform 0.5s;
 }
 
 #section4 {
@@ -296,13 +317,17 @@ footer {
 #section5 {
   .content {
     h3.animTarget {
-      transform: translateX(100vw);
+      opacity: 0;
+      transform: translateX(-100px);
       transition: transform 500ms ease-out;
     }
-    &.triggered {
-      h3.animTarget {
-        transform: translateX(0);
-      }
-    }
+  }
+}
+
+&.triggered {
+  h3.animTarget {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 2s, transform 0.5s;
   }
 }
