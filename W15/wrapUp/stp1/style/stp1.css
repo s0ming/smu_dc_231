@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Hahmlet", serif;
+}
+
 .hide {
   display: none;
 }
@@ -30,7 +34,7 @@ body {
   margin: 0;
   background-color: var(--bg);
   color: var(--txt);
-  font-family: system-ui;
+  font-family: "Hahmlet", serif;
   font-size: 1.125rem;
   line-height: 1.5;
 }
@@ -221,7 +225,7 @@ footer .wrapper {
   transform: scale(1);
 }
 
-#section2 .content.animTarget {
+#section2 .content .animTarget {
   transition: background-color 500ms ease-out, border 500ms ease-out;
 }
 #section2 h3.animTarget {
@@ -231,10 +235,10 @@ footer .wrapper {
 #section2 p.animTarget {
   animation: slideIn_down 1s ease-out forwards, fadeIn 1s ease-in forwards;
 }
-#section2.triggered h3.animTarget {
+#section2.triggered .content h3.animTarget {
   transform: translateX(0);
 }
-#section2.triggered p.animTarget {
+#section2.triggered .content p.animTarget {
   transform: translateX(0);
 }
 
@@ -265,5 +269,5 @@ footer .wrapper {
 #section5 .triggered h3.animTarget {
   opacity: 1;
   transform: translateX(0px);
-  transition: opacity 2s, transform 0.5s;
+  transition: opacity 1s, transform 0.5s;
 }

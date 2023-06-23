@@ -20,6 +20,10 @@ $accent: var(--accent);
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Hahmlet", serif;
+}
+
 .hide {
   display: none;
 }
@@ -314,20 +318,12 @@ footer {
   }
 }
 
-#section5 {
-  .content {
-    h3.animTarget {
-      opacity: 0;
-      transform: translateX(-100px);
-      transition: transform 500ms ease-out;
-    }
-  }
+#section5 h3.animTarget {
+  opacity: 0;
+  transform: translateX(-100px);
 }
-
-&.triggered {
-  h3.animTarget {
-    opacity: 1;
-    transform: translateX(0px);
-    transition: opacity 2s, transform 0.5s;
-  }
+#section5 .triggered h3.animTarget {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 1s, transform 0.5s;
 }
