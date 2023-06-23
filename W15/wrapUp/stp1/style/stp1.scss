@@ -256,6 +256,7 @@ footer {
 }
 
 #section1 {
+  text-align: center;
   h3.animTarget {
     transform: scale(0);
     transition: transform 500ms ease-out;
@@ -268,35 +269,40 @@ footer {
 }
 
 #section2 {
-  .content {
-    .animTarget {
-      transition: background-color 500ms ease-out,
-        border 500ms ease-out;
-    }
+  text-align: center;
+  color: white;
+  .content.animTarget {
+    transition: background-color 500ms ease-out,
+      border 500ms ease-out;
   }
   h3.animTarget {
-    transform: translateX(-100vw);
-    transition: transform 500ms ease-out;
+    opacity: 0;
+    transform: translateY(-100vw);
+    transition: opacity 1s,
+      transform 500ms ease-out;
   }
   p.animTarget {
-    animation: slideIn_down 1s ease-out forwards,
-      fadeIn 1s ease-in forwards;
+    opacity: 0;
+    transform: translateY(100vw);
+    transition: opacity 1s,
+      transform 500ms ease-out;
   }
   &.triggered {
-    .content {
-      .animTarget {
-      }
-      h3.animTarget {
-        transform: translateX(0);
-      }
-      p.animTarget {
-        transform: translateX(0);
-      }
+    .content.animTarget {
+    }
+    h3.animTarget {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    p.animTarget {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
 
 #section3 p.animTarget {
+  text-align: center;
   opacity: 0;
   transform: translateY(-100px);
 }
@@ -307,6 +313,8 @@ footer {
 }
 
 #section4 {
+  text-align: center;
+  color: white;
   h3.animTarget {
     transform: scale(0);
     transition: transform 500ms ease-out;
@@ -319,6 +327,7 @@ footer {
 }
 
 #section5 h3.animTarget {
+  text-align: center;
   opacity: 0;
   transform: translateX(-100px);
 }
@@ -326,4 +335,9 @@ footer {
   opacity: 1;
   transform: translateX(0px);
   transition: opacity 1s, transform 0.5s;
+}
+
+#end {
+  color: white;
+  text-align: center;
 }

@@ -217,6 +217,9 @@ footer .wrapper {
     justify-content: flex-start;
   }
 }
+#section1 {
+  text-align: center;
+}
 #section1 h3.animTarget {
   transform: scale(0);
   transition: transform 500ms ease-out;
@@ -225,24 +228,34 @@ footer .wrapper {
   transform: scale(1);
 }
 
-#section2 .content .animTarget {
+#section2 {
+  text-align: center;
+  color: white;
+}
+#section2 .content.animTarget {
   transition: background-color 500ms ease-out, border 500ms ease-out;
 }
 #section2 h3.animTarget {
-  transform: translateX(-100vw);
-  transition: transform 500ms ease-out;
+  opacity: 0;
+  transform: translateY(-100vw);
+  transition: opacity 1s, transform 500ms ease-out;
 }
 #section2 p.animTarget {
-  animation: slideIn_down 1s ease-out forwards, fadeIn 1s ease-in forwards;
+  opacity: 0;
+  transform: translateY(100vw);
+  transition: opacity 1s, transform 500ms ease-out;
 }
-#section2.triggered .content h3.animTarget {
-  transform: translateX(0);
+#section2.triggered h3.animTarget {
+  opacity: 1;
+  transform: translateY(0);
 }
-#section2.triggered .content p.animTarget {
-  transform: translateX(0);
+#section2.triggered p.animTarget {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #section3 p.animTarget {
+  text-align: center;
   opacity: 0;
   transform: translateY(-100px);
 }
@@ -253,6 +266,10 @@ footer .wrapper {
   transition: opacity 1s, transform 0.5s;
 }
 
+#section4 {
+  text-align: center;
+  color: white;
+}
 #section4 h3.animTarget {
   transform: scale(0);
   transition: transform 500ms ease-out;
@@ -262,6 +279,7 @@ footer .wrapper {
 }
 
 #section5 h3.animTarget {
+  text-align: center;
   opacity: 0;
   transform: translateX(-100px);
 }
@@ -270,4 +288,9 @@ footer .wrapper {
   opacity: 1;
   transform: translateX(0px);
   transition: opacity 1s, transform 0.5s;
+}
+
+#end {
+  color: white;
+  text-align: center;
 }
